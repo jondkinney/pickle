@@ -32,7 +32,7 @@ module Pickle
   protected
     def open_in_browser(path) # :nodoc
       require "launchy"
-      Launchy::Browser.run(path)
+      Launchy.open(path)
     rescue LoadError
       warn "Sorry, you need to install launchy to open emails: `gem install launchy`"
     end
